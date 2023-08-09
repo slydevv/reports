@@ -35,7 +35,7 @@ export default function Login() {
       .finally(() => setIsLoading(false));
   };
   const redirect = async () => {
-    const session = await getSession()
+    const session = await getSession() 
     const status = session?.user?.isAdmin
     status ? router.push("/admin") : router.push("/dashboard");
   }
