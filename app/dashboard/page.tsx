@@ -19,7 +19,7 @@ export default function Dashboard() {
         
   })
 
-   const query = useQuery({
+   const query = useQuery({ 
      queryKey: ["getcategory"],
      queryFn: () => axios.get("/api/category"),
      onSuccess: ({ data }) => {  setCategories(data) },
@@ -36,7 +36,10 @@ export default function Dashboard() {
 
     
   };
-  
+  if (status === "loading") {
+    return <div>Loading! If this presist, refresh your page</div>;
+  }
+  // p
     return (
       <div className="flex flex-row max-w-[2000px] mx-auto px-6 lg:px-0">
         {/* <!-- Navigation bar --> */}
