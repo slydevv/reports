@@ -10,7 +10,7 @@ import Report from "./components/report";
 import ConfirmModal from "../components/confirmModal";
 import Update from "./components/update";
 
-export default function Report() {
+export default function Reports() {
   const [reports, setReport] = useState([]);
   const [openCreate, setOpenCreate] = useState(false);
   const [update, setUpdate] = useState(false);

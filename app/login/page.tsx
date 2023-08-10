@@ -37,7 +37,7 @@ export default function Login() {
   const redirect = async () => {
     const session = await getSession() 
     const status = session?.user?.isAdmin
-    status ? router.push("/admin") : router.push("/reports");
+    status ? router.push("/admin") : router.push("/allreports");
   }
   return (
     <div className="max-w-[2000px] gap-x-10 lg:gap-x-20 mx-auto px-7 lg:pr-20">
