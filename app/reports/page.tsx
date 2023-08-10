@@ -7,7 +7,7 @@ import { useState } from "react"
 import { useQuery } from "@tanstack/react-query";
 import { toast } from "react-hot-toast";
 
-export default function Dashboard() {
+export default function Reports() {
   const router = useRouter();
   const [categories, setCategories] = useState([])
 
