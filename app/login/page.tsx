@@ -21,7 +21,7 @@ export default function Login() {
   const handleLogin: SubmitHandler<Inputs> = async (data) => {
     setIsLoading(true);
 
-    signIn("credentials", { ...data, redirect: false })
+    signIn("credentials", { ...data, redirect: false, callbackUrl:`/dashboard` })
       .then((res) => {
         if (res?.error) {
          
