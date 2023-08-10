@@ -21,7 +21,7 @@ export default function Login() {
   const handleLogin: SubmitHandler<Inputs> = async (data) => {
     setIsLoading(true);
 
-    signIn("credentials", { ...data, redirect: false, callbackUrl:`/dashboard` })
+    signIn("credentials", { ...data, redirect: false,  })
       .then((res) => {
         if (res?.error) {
          
@@ -37,7 +37,7 @@ export default function Login() {
   const redirect = async () => {
     const session = await getSession() 
     const status = session?.user?.isAdmin
-    status ? router.push("/admin") : router.push("/dashboard");
+    status ? router.push("/admin") : router.push("/report");
   }
   return (
     <div className="max-w-[2000px] gap-x-10 lg:gap-x-20 mx-auto px-7 lg:pr-20">
